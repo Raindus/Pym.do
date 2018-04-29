@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">Pym.do</string>
+    <string name="focus_transition_name">focus_transition_reveal</string>
+
+    <string name="main_today_focus">今日吸潘</string>
+    <string name="main_today_bamboo">收获竹子</string>
+    <string name="main_today_focus_time">吸潘时长</string>
+
+    <string name="main_banner">守得云开</string>
+    <string name="main_report">吸潘报告</string>
+
+    <string name="main_setting">设置</string>
+    <string name="main_bamboo_clock">竹子钟</string>
+    <string name="main_bamboo_clock_describe">今日目标、吸潘时长、休息时长</string>
+    <string name="main_personal">个性化</string>
+    <string name="main_personal_describe">封面、白噪音、标语</string>
+
+    <string name="main_creator">创造者</string>
+    <string name="main_station">产品 &amp; 设计 &amp; 开发</string>
+    <string name="main_station_describe">\@Raindus_</string>
+    <string name="main_organization">组织</string>
+    <string name="main_organization_describe">PYM技术研发BU（QQ群:307608737）</string>
+
+    <string name="main_thanks">鸣谢</string>
+    <string name="main_res">资源来源网络</string>
+    <string name="main_res_describe">\@潘粤明、@茉安之、@广大潘友</string>
+
+    <string name="main_about">关于</string>
+    <string name="main_version">版本</string>
+    <string name="main_version_describe">0.8.0（beta）</string>
+
+    <string name="progress_circle_view_completed">目标达成</string>
+    <string name="progress_circle_view_target">目标%d分钟</string>
+    <string name="progress_circle_view_fraction">%d%%</string>
 </resources>

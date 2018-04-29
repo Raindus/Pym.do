@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+
+    <!-- 主亮色调-丹东石 -->
+    <color name="dandongshi">#d7c16b</color>
+    <color name="dandongshi_dark">#dbc983</color>
+    <color name="dandongshi_light">#e8e2c7</color>
+
+    <!-- 普通字体色调 -->
+    <color name="text_color">#757575</color>
+
+    <!-- 普通背景色调 -->
+    <color name="background_color">#f0f0f0</color>
+    <!-- 半透明背景色调 -->
+    <color name="mid_transparent">#80f0f0f0</color>
 </resources>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主页 间距-->
+    <dimen name="main_interval">16dp</dimen>
+
+    <!-- 主页 标题上间距-->
+    <dimen name="main_title_margin_top">30dp</dimen>
+    <!-- 主页 标题文字 大小-->
+    <dimen name="main_size_of_title">28dp</dimen>
+    <!-- 主页  进度条大小-->
+    <dimen name="main_size_of_progress">180dp</dimen>
+
+    <!-- 主页 今日吸潘 上间距-->
+    <dimen name="main_today_margin_top">100dp</dimen>
+    <!-- 主页 今日吸潘 水平间距-->
+    <dimen name="main_today_margin_horizontal">20dp</dimen>
+    <!-- 主页 今日吸潘 标题文字大小 -->
+    <dimen name="main_size_of_today_title">12dp</dimen>
+    <!-- 主页 今日吸潘 内容文字大小 -->
+    <dimen name="main_size_of_today_content">22dp</dimen>
+
+    <!-- 主页 滚动区域距离顶部最小间隔-->
+    <dimen name="main_scroll_margin_top">334dp</dimen>
+    <!-- 主页 滚动下拉需要保留的距离-->
+    <dimen name="main_scroll_distance">66dp</dimen>
+
+    <!-- 主页 banner 与 report 的高度-->
+    <dimen name="main_banner_height">100dp</dimen>
+    <!-- 主页 banner 与 report 的间距-->
+    <dimen name="main_interval_of_banner">8dp</dimen>
+    <!-- 主页 banner 与 report 的边框-->
+    <dimen name="main_border_of_banner">2dp</dimen>
+    <!-- 主页 banner 与 report 的文字大小-->
+    <dimen name="main_size_of_banner_text">18dp</dimen>
+
+    <!-- 主页 卡片标题大小-->
+    <dimen name="main_size_of_card_title">14dp</dimen>
+    <!-- 主页 卡片标题上边距-->
+    <dimen name="main_card_title_margin_top">12dp</dimen>
+    <!-- 主页 卡片标题左边距-->
+    <dimen name="main_card_title_margin_left">20dp</dimen>
+
+    <!-- 主页 卡片item高度-->
+    <dimen name="main_card_item_height">68dp</dimen>
+    <!-- 主页 卡片item 第一项上边距-->
+    <dimen name="main_card_item_margin_top_one">32dp</dimen>
+    <!-- 主页 卡片item 第二项上边距-->
+    <dimen name="main_card_item_margin_top_two">100dp</dimen>
+    <!-- 主页 卡片item 图片大小-->
+    <dimen name="main_size_of_card_item_image">20dp</dimen>
+    <!-- 主页 卡片item 图片 左边距-->
+    <dimen name="main_card_item_image_margin_left">20dp</dimen>
+    <!-- 主页 卡片item 图片 上边距-->
+    <dimen name="main_card_item_image_margin_top">24dp</dimen>
+
+    <!-- 主页 卡片item 内容 左边距-->
+    <dimen name="main_card_item_text_margin_left">60dp</dimen>
+    <!-- 主页 卡片item 标题 上边距-->
+    <dimen name="main_card_item_title_margin_top">12dp</dimen>
+    <!-- 主页 卡片item 标题文字大小-->
+    <dimen name="main_size_of_card_item_title_text">16dp</dimen>
+    <!-- 主页 卡片item 描述 上边距-->
+    <dimen name="main_card_item_describe_margin_top">36dp</dimen>
+    <!-- 主页 卡片item 描述文字大小-->
+    <dimen name="main_size_of_card_item_describe_text">14dp</dimen>
+
+    <!-- 主页 悬浮按钮边距-->
+    <dimen name="main_fab_margin">32dp</dimen>
+
+</resources>

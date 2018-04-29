@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.raindus.pymdo.ui.cover.CoverRelativeLayout
+        android:id="@+id/main_crl_cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:clickable="true"
+        app:cover="@drawable/bg_main">
+
+        <TextView
+            android:id="@+id/main_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/main_interval"
+            android:layout_marginTop="@dimen/main_title_margin_top"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/main_size_of_title" />
+
+        <RelativeLayout
+            android:id="@+id/main_rl_today"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/main_today_margin_top"
+            android:visibility="invisible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/main_today_margin_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_today_focus"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/main_size_of_today_title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/main_interval"
+                    android:text="0"
+                    android:textColor="@color/dandongshi"
+                    android:textSize="@dimen/main_size_of_today_content"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_today_bamboo"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/main_size_of_today_title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/main_interval"
+                    android:text="0"
+                    android:textColor="@color/dandongshi"
+                    android:textSize="@dimen/main_size_of_today_content"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/main_today_focus_time"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/main_size_of_today_title" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/dandongshi"
+                    android:textSize="@dimen/main_size_of_today_content"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <com.raindus.pymdo.ui.ProgressCircleView
+                android:id="@+id/main_pcv_today_progress"
+                android:layout_width="@dimen/main_size_of_progress"
+                android:layout_height="@dimen/main_size_of_progress"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+    </com.raindus.pymdo.ui.cover.CoverRelativeLayout>
+
+    <ScrollView
+        android:id="@+id/main_sv_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/main_scroll_margin_top"
+        android:overScrollMode="never"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/main_banner_height"
+                android:layout_marginHorizontal="@dimen/main_interval"
+                android:layout_marginTop="@dimen/main_interval"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/main_interval_of_banner"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/main_rl_banner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/main_border_of_banner"
+                        android:clickable="true"
+                        android:foreground="?android:selectableItemBackground">
+
+                        <ImageView
+                            android:id="@+id/main_iv_banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bg_main_banner" />
+
+                        <TextView
+                            android:id="@+id/main_tv_banner"
+                            android:layout_width="@dimen/main_size_of_banner_text"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginLeft="@dimen/main_interval_of_banner"
+                            android:gravity="center"
+                            android:maxLength="@integer/main_max_length_of_banner_text"
+                            android:text="@string/main_banner"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/main_size_of_banner_text"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_interval_of_banner"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:id="@+id/main_rl_report"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="@dimen/main_border_of_banner"
+                        android:clickable="true"
+                        android:foreground="?android:selectableItemBackground">
+
+                        <ImageView
+                            android:id="@+id/main_iv_report"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/bg_main_report" />
+
+                        <TextView
+                            android:id="@+id/main_tv_report"
+                            android:layout_width="@dimen/main_size_of_banner_text"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/main_interval_of_banner"
+                            android:gravity="center"
+                            android:maxLength="@integer/main_max_length_of_banner_text"
+                            android:text="@string/main_report"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/main_size_of_banner_text"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/main_interval"
+                android:layout_marginTop="@dimen/main_interval">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_card_title_margin_left"
+                    android:layout_marginTop="@dimen/main_card_title_margin_top"
+                    android:text="@string/main_setting"
+                    android:textColor="@color/dandongshi"
+                    android:textSize="@dimen/main_size_of_card_title" />
+
+                <RelativeLayout
+                    android:id="@+id/main_rl_setting_focus"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_card_item_height"
+                    android:layout_marginTop="@dimen/main_card_item_margin_top_one"
+                    android:background="?android:selectableItemBackground"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/main_size_of_card_item_image"
+                        android:layout_height="@dimen/main_size_of_card_item_image"
+                        android:layout_marginLeft="@dimen/main_card_item_image_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_image_margin_top"
+                        android:src="@drawable/ic_bamboo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_title_margin_top"
+                        android:text="@string/main_bamboo_clock"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/main_size_of_card_item_title_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_describe_margin_top"
+                        android:maxLines="@integer/main_max_line_of_card_item_describe_text"
+                        android:text="@string/main_bamboo_clock_describe"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/main_size_of_card_item_describe_text" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/main_rl_setting_personal"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_card_item_height"
+                    android:layout_marginTop="@dimen/main_card_item_margin_top_two"
+                    android:background="?android:selectableItemBackground"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/main_size_of_card_item_image"
+                        android:layout_height="@dimen/main_size_of_card_item_image"
+                        android:layout_marginLeft="@dimen/main_card_item_image_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_image_margin_top"
+                        android:src="@drawable/ic_draw" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_title_margin_top"
+                        android:text="@string/main_personal"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/main_size_of_card_item_title_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_describe_margin_top"
+                        android:maxLines="@integer/main_max_line_of_card_item_describe_text"
+                        android:text="@string/main_personal_describe"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/main_size_of_card_item_describe_text" />
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/main_interval"
+                android:layout_marginTop="@dimen/main_interval">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_card_title_margin_left"
+                    android:layout_marginTop="@dimen/main_card_title_margin_top"
+                    android:text="@string/main_creator"
+                    android:textColor="@color/dandongshi"
+                    android:textSize="@dimen/main_size_of_card_title" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_card_item_height"
+                    android:layout_marginTop="@dimen/main_card_item_margin_top_one">
+
+                    <ImageView
+                        android:layout_width="@dimen/main_size_of_card_item_image"
+                        android:layout_height="@dimen/main_size_of_card_item_image"
+                        android:layout_marginLeft="@dimen/main_card_item_image_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_image_margin_top"
+                        android:src="@drawable/ic_developer" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_title_margin_top"
+                        android:text="@string/main_station"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/main_size_of_card_item_title_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_describe_margin_top"
+                        android:maxLines="@integer/main_max_line_of_card_item_describe_text"
+                        android:text="@string/main_station_describe"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/main_size_of_card_item_describe_text" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_card_item_height"
+                    android:layout_marginTop="@dimen/main_card_item_margin_top_two">
+
+                    <ImageView
+                        android:layout_width="@dimen/main_size_of_card_item_image"
+                        android:layout_height="@dimen/main_size_of_card_item_image"
+                        android:layout_marginLeft="@dimen/main_card_item_image_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_image_margin_top"
+                        android:src="@drawable/ic_organization" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_title_margin_top"
+                        android:text="@string/main_organization"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/main_size_of_card_item_title_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_describe_margin_top"
+                        android:maxLines="@integer/main_max_line_of_card_item_describe_text"
+                        android:text="@string/main_organization_describe"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/main_size_of_card_item_describe_text" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/main_interval"
+                android:layout_marginTop="@dimen/main_interval">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_card_title_margin_left"
+                    android:layout_marginTop="@dimen/main_card_title_margin_top"
+                    android:text="@string/main_thanks"
+                    android:textColor="@color/dandongshi"
+                    android:textSize="@dimen/main_size_of_card_title" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_card_item_height"
+                    android:layout_marginTop="@dimen/main_card_item_margin_top_one">
+
+                    <ImageView
+                        android:layout_width="@dimen/main_size_of_card_item_image"
+                        android:layout_height="@dimen/main_size_of_card_item_image"
+                        android:layout_marginLeft="@dimen/main_card_item_image_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_image_margin_top"
+                        android:src="@drawable/ic_thanks" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_title_margin_top"
+                        android:text="@string/main_res"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/main_size_of_card_item_title_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_describe_margin_top"
+                        android:maxLines="@integer/main_max_line_of_card_item_describe_text"
+                        android:text="@string/main_res_describe"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/main_size_of_card_item_describe_text" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/main_interval">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_card_title_margin_left"
+                    android:layout_marginTop="@dimen/main_card_title_margin_top"
+                    android:text="@string/main_about"
+                    android:textColor="@color/dandongshi"
+                    android:textSize="@dimen/main_size_of_card_title" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_card_item_height"
+                    android:layout_marginTop="@dimen/main_card_item_margin_top_one">
+
+                    <ImageView
+                        android:layout_width="@dimen/main_size_of_card_item_image"
+                        android:layout_height="@dimen/main_size_of_card_item_image"
+                        android:layout_marginLeft="@dimen/main_card_item_image_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_image_margin_top"
+                        android:src="@drawable/ic_version" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_title_margin_top"
+                        android:text="@string/main_version"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/main_size_of_card_item_title_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_describe_margin_top"
+                        android:maxLines="@integer/main_max_line_of_card_item_describe_text"
+                        android:text="@string/main_version_describe"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/main_size_of_card_item_describe_text" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/main_fab_focus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_margin="@dimen/main_fab_margin"
+        android:clickable="true"
+        android:src="@drawable/ic_action_focus"
+        android:transitionName="@string/focus_transition_name"
+        app:fabSize="normal" />
+</FrameLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 主页 banner 与 report 的文字最大数量-->
+    <integer name="main_max_length_of_banner_text">4</integer>
+
+    <!-- 主页 card item 中描述内容文字的最大行数-->
+    <integer name="main_max_line_of_card_item_describe_text">1</integer>
+</resources>
