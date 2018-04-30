@@ -41,4 +41,28 @@
     <string name="setting_focus_light">常亮</string>
     <string name="setting_focus_music">音乐</string>
 
+    <string name="report_today_focus_times">今日吸潘次数</string>
+    <string name="report_today_bamboo_num">今日竹子收成</string>
+    <string name="report_today_focus_time">今日吸潘时长(h)</string>
+    <string name="report_week_focus_times">本周吸潘次数</string>
+    <string name="report_week_bamboo_num">本周竹子收成</string>
+    <string name="report_week_focus_time">本周吸潘时长(h)</string>
+    <string name="report_all_focus_times">总吸潘次数</string>
+    <string name="report_all_bamboo_num">总竹子收成</string>
+    <string name="report_all_focus_time">总吸潘时长(h)</string>
+
+    <string name="report_best_focus_day">本周最佳吸潘日</string>
+    <string name="report_best_focus_time">本周最佳吸潘时段</string>
+    <string name="report_best_non_data">暂无数据</string>
+    <string name="report_best_focus_day_over">比平均值高出%d%%</string>
+    <string name="report_best_focus_period">%d:00-%d:00</string>
+    <string name="report_lately_focus_times">最近吸潘次数</string>
+    <string name="report_lately_bamboo_num">最近竹子收成</string>
+    <string name="report_lately_focus_time">最近吸潘时长(h)</string>
+    <string name="report_day">天</string>
+    <string name="report_week">周</string>
+    <string name="report_month">月</string>
+
+    <string name="loading_text">努力加载中...</string>
+
 </resources>

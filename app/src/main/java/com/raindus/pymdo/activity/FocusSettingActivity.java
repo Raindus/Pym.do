@@ -120,6 +120,7 @@ public class FocusSettingActivity extends BaseActivity implements SeekBar.OnSeek
                 }
             }
             if (isUpdate) {
+                setResult(RESULT_OK);
                 FocusParam.setTarget(mSeekBarParam[0]);
                 FocusParam.setTime(mSeekBarParam[1]);
                 FocusParam.setShortRest(mSeekBarParam[2]);

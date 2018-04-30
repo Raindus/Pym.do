@@ -17,6 +17,8 @@ import com.raindus.pymdo.R;
 
 public class BaseActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
 
+    protected static final int REQUEST_CODE_OF_FOCUS = 1;
+
     // 初始化标题栏
     protected void initTitleBar(String title, boolean positive) {
         findViewById(R.id.title_bar_negative).setOnClickListener(this);
@@ -27,10 +29,21 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    // 取消加载
+    protected void dismissLoading() {
+        findViewById(R.id.view_loading).setVisibility(View.GONE);
+    }
+
     // 在当前界面之上覆盖目标界面
     public void overlay(Class<?> classObj) {
         Intent intent = new Intent(this, classObj);
         startActivity(intent);
+    }
+
+    // 在当前界面之上覆盖目标界面
+    public void overlay(Class<?> classObj, int requestCode) {
+        Intent intent = new Intent(this, classObj);
+        startActivityForResult(intent, requestCode);
     }
 
     // 带数据
@@ -69,11 +82,14 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        if (v.getId() == R.id.title_bar_negative)
-            finish();
-        if (v.getId() == R.id.title_bar_positive) {
-            onPositive();
-            finish();
+        switch (v.getId()) {
+            case R.id.title_bar_negative:
+                finish();
+                break;
+            case R.id.title_bar_positive:
+                onPositive();
+                finish();
+                break;
         }
     }
 

@@ -4,7 +4,10 @@
         <attr name="cover" format="integer" />
     </declare-styleable>
 
-    <declare-styleable name="SlideRelativeLayout">
-        <attr name="slideBackground" format="integer" />
+    <declare-styleable name="BarChartView">
+        <attr name="mode" format="integer">
+            <enum name="week" value="1" />
+            <enum name="time" value="2" />
+        </attr>
     </declare-styleable>
 </resources>

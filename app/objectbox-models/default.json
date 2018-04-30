@@ -1,0 +1,94 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:4058447166337403648",
+      "lastPropertyId": "8:8074302319317293353",
+      "name": "FocusEntity",
+      "properties": [
+        {
+          "id": "1:7341863059978227252",
+          "name": "id"
+        },
+        {
+          "id": "2:7194583706086626539",
+          "name": "startTime"
+        },
+        {
+          "id": "3:3465693124852681934",
+          "name": "endTime"
+        },
+        {
+          "id": "4:6811244360116442047",
+          "name": "focusTime"
+        },
+        {
+          "id": "5:5726194598502872824",
+          "name": "shortRestTime"
+        },
+        {
+          "id": "6:3398031976987097065",
+          "name": "longRestTime"
+        },
+        {
+          "id": "7:5320155345280562326",
+          "name": "longRestIntervalNum"
+        },
+        {
+          "id": "8:8074302319317293353",
+          "name": "bambooNum"
+        }
+      ],
+      "relations": []
+    },
+    {
+      "id": "2:3419882057254484148",
+      "lastPropertyId": "7:3205546356260514664",
+      "name": "FocusReportEntity",
+      "properties": [
+        {
+          "id": "1:4659952972614457626",
+          "name": "id"
+        },
+        {
+          "id": "2:5954941223984138769",
+          "name": "type"
+        },
+        {
+          "id": "3:2671293533082705803",
+          "name": "date"
+        },
+        {
+          "id": "4:2993685522093467396",
+          "name": "focusTimes"
+        },
+        {
+          "id": "5:5592850172344124919",
+          "name": "bambooNum"
+        },
+        {
+          "id": "6:348740001430829592",
+          "name": "focusTime"
+        },
+        {
+          "id": "7:3205546356260514664",
+          "name": "periodSpread"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "2:3419882057254484148",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}

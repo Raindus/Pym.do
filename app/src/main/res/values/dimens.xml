@@ -91,4 +91,31 @@
     <!-- 竹子钟 设置 seek bar / switch 左间距-->
     <dimen name="setting_focus_bar_margin_left">80dp</dimen>
 
+    <!-- 吸潘报告 基本数据高度 -->
+    <dimen name="report_base_data_item_height">70dp</dimen>
+    <!-- 吸潘报告 基本数据 垂直/上 间距-->
+    <dimen name="report_base_data_item_margin_top">6dp</dimen>
+    <!-- 吸潘报告 基本数据 下间距-->
+    <dimen name="report_base_data_item_margin_bottom">8dp</dimen>
+    <!-- 吸潘报告 基本数据 值 大小-->
+    <dimen name="report_size_of_base_data_item_value">26dp</dimen>
+    <!-- 吸潘报告 基本数据 标题 大小-->
+    <dimen name="report_size_of_base_data_item_title">14dp</dimen>
+    <!-- 吸潘报告 图表块 高度-->
+    <dimen name="report_chart_item_height">180dp</dimen>
+    <!-- 吸潘报告 图表 高度-->
+    <dimen name="report_chart_height">150dp</dimen>
+    <!-- 吸潘报告 图表块 标题 大小-->
+    <dimen name="report_size_of_chart_item_title">14dp</dimen>
+    <!-- 吸潘报告 图表块 标题 高度-->
+    <dimen name="report_chart_item_title_height">30dp</dimen>
+    <!-- 吸潘报告 图表块 标题 上间距-->
+    <dimen name="report_chart_item_title_margin_top">8dp</dimen>
+    <!-- 吸潘报告 日月周 宽度-->
+    <dimen name="report_dwm_width">106dp</dimen>
+    <!-- 吸潘报告 日月周  右间距-->
+    <dimen name="report_dwm_margin_right">8dp</dimen>
+
+    <!-- 加载文字大小-->
+    <dimen name="loading_size_of_text">14dp</dimen>
 </resources>

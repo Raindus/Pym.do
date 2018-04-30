@@ -39,6 +39,7 @@ public class FocusActivity extends BaseActivity implements FocusAnim.OnFocusAnim
 
     @Override
     public void onBackPressed() {
+        setResult(RESULT_OK);
         mFocusAnim.containerVisible(false);
     }
 

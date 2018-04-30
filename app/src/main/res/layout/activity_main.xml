@@ -44,6 +44,7 @@
                     android:textSize="@dimen/main_size_of_today_title" />
 
                 <TextView
+                    android:id="@+id/main_tv_today_focus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/main_interval"
@@ -60,6 +61,7 @@
                     android:textSize="@dimen/main_size_of_today_title" />
 
                 <TextView
+                    android:id="@+id/main_tv_today_bamboo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="@dimen/main_interval"
@@ -76,6 +78,7 @@
                     android:textSize="@dimen/main_size_of_today_title" />
 
                 <TextView
+                    android:id="@+id/main_tv_today_focus_time"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="0"

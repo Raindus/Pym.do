@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <include layout="@layout/view_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/title_bar_height"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/report_base_data_item_height"
+                android:background="@android:color/white"
+                android:paddingVertical="@dimen/report_base_data_item_margin_top">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/report_tv_today_focus"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_base_data_item_value" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/report_today_focus_times"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/report_size_of_base_data_item_title" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/report_tv_week_focus"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_base_data_item_value" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/report_week_focus_times"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/report_size_of_base_data_item_title" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/report_tv_all_focus"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_base_data_item_value" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/report_all_focus_times"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/report_size_of_base_data_item_title" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/report_base_data_item_height"
+                android:background="@android:color/white"
+                android:paddingVertical="@dimen/report_base_data_item_margin_top">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/report_tv_today_bamboo"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_base_data_item_value" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/report_today_bamboo_num"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/report_size_of_base_data_item_title" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/report_tv_week_bamboo"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_base_data_item_value" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/report_week_bamboo_num"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/report_size_of_base_data_item_title" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/report_tv_all_bamboo"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_base_data_item_value" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/report_all_bamboo_num"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/report_size_of_base_data_item_title" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/report_base_data_item_height"
+                android:background="@android:color/white"
+                android:paddingBottom="@dimen/report_base_data_item_margin_bottom"
+                android:paddingTop="@dimen/report_base_data_item_margin_top">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/report_tv_today_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_base_data_item_value" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/report_today_focus_time"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/report_size_of_base_data_item_title" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/report_tv_week_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_base_data_item_value" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/report_week_focus_time"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/report_size_of_base_data_item_title" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/report_tv_all_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="3"
+                        android:fontFamily="sans-serif"
+                        android:gravity="center"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_base_data_item_value" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="@string/report_all_focus_time"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/report_size_of_base_data_item_title" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/report_chart_item_height"
+                android:layout_marginTop="@dimen/main_interval"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/report_chart_item_title_height"
+                    android:layout_marginTop="@dimen/report_chart_item_title_margin_top">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/main_interval"
+                        android:gravity="center_vertical"
+                        android:text="@string/report_best_focus_day"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_chart_item_title" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="@dimen/report_chart_height"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/report_tv_best_focus_day"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/main_interval"
+                            android:layout_marginTop="@dimen/main_interval"
+                            android:textColor="@color/dandongshi"
+                            android:textSize="22dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/report_tv_best_focus_day_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/main_interval"
+                            android:layout_marginTop="@dimen/main_interval"
+                            android:textColor="@color/dandongshi"
+                            android:textSize="20dp" />
+
+                        <TextView
+                            android:id="@+id/report_tv_best_focus_day_over"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/main_interval"
+                            android:layout_marginTop="18dp"
+                            android:textColor="@color/text_color"
+                            android:textSize="14dp" />
+                    </LinearLayout>
+
+                    <com.raindus.pymdo.ui.chart.BarChartView
+                        android:id="@+id/report_bc_week"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        app:mode="week" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/report_chart_item_height"
+                android:layout_marginTop="@dimen/main_interval"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/report_chart_item_title_height"
+                    android:layout_marginTop="@dimen/report_chart_item_title_margin_top">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/main_interval"
+                        android:gravity="center_vertical"
+                        android:text="@string/report_best_focus_time"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_chart_item_title" />
+
+                    <TextView
+                        android:id="@+id/report_tv_best_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/main_interval"
+                        android:gravity="center_vertical"
+                        android:textColor="@color/dandongshi"
+                        android:textSize="16dp" />
+                </RelativeLayout>
+
+                <com.raindus.pymdo.ui.chart.BarChartView
+                    android:id="@+id/report_bc_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/report_chart_height"
+                    app:mode="time" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/main_interval"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/report_chart_item_title_height"
+                    android:layout_marginTop="@dimen/report_chart_item_title_margin_top">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/main_interval"
+                        android:gravity="center_vertical"
+                        android:text="@string/report_lately_focus_times"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_chart_item_title" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/report_dwm_width"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/report_dwm_margin_right"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/report_btn_focus_day"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:text="@string/report_day"
+                            android:textColor="@color/dandongshi"
+                            android:textSize="@dimen/report_size_of_chart_item_title" />
+
+                        <Button
+                            android:id="@+id/report_btn_focus_week"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:text="@string/report_week"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/report_size_of_chart_item_title" />
+
+                        <Button
+                            android:id="@+id/report_btn_focus_month"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:text="@string/report_month"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/report_size_of_chart_item_title" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.raindus.pymdo.ui.chart.LineChartView
+                    android:id="@+id/report_lc_focus"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/report_chart_height" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/main_interval"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/report_chart_item_title_height"
+                    android:layout_marginTop="@dimen/report_chart_item_title_margin_top">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/main_interval"
+                        android:gravity="center_vertical"
+                        android:text="@string/report_lately_bamboo_num"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_chart_item_title" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/report_dwm_width"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/report_dwm_margin_right"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/report_btn_bamboo_day"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:text="@string/report_day"
+                            android:textColor="@color/dandongshi"
+                            android:textSize="@dimen/report_size_of_chart_item_title" />
+
+                        <Button
+                            android:id="@+id/report_btn_bamboo_week"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:text="@string/report_week"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/report_size_of_chart_item_title" />
+
+                        <Button
+                            android:id="@+id/report_btn_bamboo_month"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:text="@string/report_month"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/report_size_of_chart_item_title" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.raindus.pymdo.ui.chart.LineChartView
+                    android:id="@+id/report_lc_bamboo"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/report_chart_height" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/main_interval"
+                android:background="@android:color/white"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/report_chart_item_title_height"
+                    android:layout_marginTop="@dimen/report_chart_item_title_margin_top">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/main_interval"
+                        android:gravity="center_vertical"
+                        android:text="@string/report_lately_focus_time"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/report_size_of_chart_item_title" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/report_dwm_width"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/report_dwm_margin_right"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/report_btn_time_day"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:text="@string/report_day"
+                            android:textColor="@color/dandongshi"
+                            android:textSize="@dimen/report_size_of_chart_item_title" />
+
+                        <Button
+                            android:id="@+id/report_btn_time_week"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:text="@string/report_week"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/report_size_of_chart_item_title" />
+
+                        <Button
+                            android:id="@+id/report_btn_time_month"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="?android:selectableItemBackgroundBorderless"
+                            android:text="@string/report_month"
+                            android:textColor="@color/text_color"
+                            android:textSize="@dimen/report_size_of_chart_item_title" />
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <com.raindus.pymdo.ui.chart.LineChartView
+                    android:id="@+id/report_lc_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/report_chart_height" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/view_loading" />
+
+</RelativeLayout>
