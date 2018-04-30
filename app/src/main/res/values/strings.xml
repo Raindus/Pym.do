@@ -13,7 +13,7 @@
     <string name="main_bamboo_clock">竹子钟</string>
     <string name="main_bamboo_clock_describe">今日目标、吸潘时长、休息时长</string>
     <string name="main_personal">个性化</string>
-    <string name="main_personal_describe">封面、白噪音、标语</string>
+    <string name="main_personal_describe">封面、音乐、标语</string>
 
     <string name="main_creator">创造者</string>
     <string name="main_station">产品 &amp; 设计 &amp; 开发</string>
@@ -32,4 +32,13 @@
     <string name="progress_circle_view_completed">目标达成</string>
     <string name="progress_circle_view_target">目标%d分钟</string>
     <string name="progress_circle_view_fraction">%d%%</string>
+
+    <string name="setting_focus_update">每日修改次数（%d/1）</string>
+    <string name="setting_focus_target">今日目标</string>
+    <string name="setting_focus_short_rest">短休息时长</string>
+    <string name="setting_focus_long_rest">长休息时长</string>
+    <string name="setting_focus_long_rest_interval">长休息间隔</string>
+    <string name="setting_focus_light">常亮</string>
+    <string name="setting_focus_music">音乐</string>
+
 </resources>

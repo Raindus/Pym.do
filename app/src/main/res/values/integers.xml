@@ -5,4 +5,16 @@
 
     <!-- 主页 card item 中描述内容文字的最大行数-->
     <integer name="main_max_line_of_card_item_describe_text">1</integer>
+
+    <!-- 设置 竹子钟 今日目标 seekBar 最大值 （30-600）min-->
+    <integer name="setting_focus_sb_max_of_target">570</integer>
+    <!-- 设置 竹子钟 吸潘时长 seekBar 最大值 （5-120）min-->
+    <integer name="setting_focus_sb_max_of_time">115</integer>
+    <!-- 设置 竹子钟 短休息时长 seekBar 最大值 （1-30）min-->
+    <integer name="setting_focus_sb_max_of_short_rest">29</integer>
+    <!-- 设置 竹子钟 长休息时长 seekBar 最大值 （5-60）min-->
+    <integer name="setting_focus_sb_max_of_long_rest">55</integer>
+    <!-- 设置 竹子钟 长休息间隔 seekBar 最大值 （1-10）-->
+    <integer name="setting_focus_sb_max_of_long_interval">9</integer>
+
 </resources>

@@ -6,6 +6,9 @@
     <color name="dandongshi_dark">#dbc983</color>
     <color name="dandongshi_light">#e8e2c7</color>
 
+    <!-- 分割线色调-浅棕灰 -->
+    <color name="qianzonghui">#e1dbcd</color>
+
     <!-- 普通字体色调 -->
     <color name="text_color">#757575</color>
 

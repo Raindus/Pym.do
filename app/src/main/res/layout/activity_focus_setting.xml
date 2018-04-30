@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/setting_focus_tv_update"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_focus_update_text"
+                android:background="@android:color/white"
+                android:gravity="center_horizontal|bottom"
+                android:textColor="@color/text_color"
+                android:textSize="@dimen/setting_focus_size_of_status" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_focus_item_height"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:layout_marginTop="@dimen/setting_focus_title_margin_top"
+                    android:text="@string/setting_focus_target"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/setting_focus_size_of_title" />
+
+                <SeekBar
+                    android:id="@+id/setting_focus_sb_target"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/setting_focus_status_margin_bottom"
+                    android:layout_marginLeft="@dimen/setting_focus_bar_margin_left"
+                    android:layout_marginRight="@dimen/main_interval"
+                    android:max="@integer/setting_focus_sb_max_of_target" />
+
+                <TextView
+                    android:id="@+id/setting_focus_tv_target"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/setting_focus_status_margin_bottom"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/setting_focus_size_of_status" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_focus_item_height"
+                android:layout_marginTop="@dimen/main_interval"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:layout_marginTop="@dimen/setting_focus_title_margin_top"
+                    android:text="@string/main_today_focus_time"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/setting_focus_size_of_title" />
+
+                <SeekBar
+                    android:id="@+id/setting_focus_sb_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/setting_focus_status_margin_bottom"
+                    android:layout_marginLeft="@dimen/setting_focus_bar_margin_left"
+                    android:layout_marginRight="@dimen/main_interval"
+                    android:max="@integer/setting_focus_sb_max_of_time" />
+
+                <TextView
+                    android:id="@+id/setting_focus_tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/setting_focus_status_margin_bottom"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/setting_focus_size_of_status" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_focus_item_height"
+                android:layout_marginTop="@dimen/setting_focus_item_interval"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:layout_marginTop="@dimen/setting_focus_title_margin_top"
+                    android:text="@string/setting_focus_short_rest"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/setting_focus_size_of_title" />
+
+                <SeekBar
+                    android:id="@+id/setting_focus_sb_short_rest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/setting_focus_status_margin_bottom"
+                    android:layout_marginLeft="@dimen/setting_focus_bar_margin_left"
+                    android:layout_marginRight="@dimen/main_interval"
+                    android:max="@integer/setting_focus_sb_max_of_short_rest" />
+
+                <TextView
+                    android:id="@+id/setting_focus_tv_short_rest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/setting_focus_status_margin_bottom"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/setting_focus_size_of_status" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_focus_item_height"
+                android:layout_marginTop="@dimen/setting_focus_item_interval"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:layout_marginTop="@dimen/setting_focus_title_margin_top"
+                    android:text="@string/setting_focus_long_rest"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/setting_focus_size_of_title" />
+
+                <SeekBar
+                    android:id="@+id/setting_focus_sb_long_rest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/setting_focus_status_margin_bottom"
+                    android:layout_marginLeft="@dimen/setting_focus_bar_margin_left"
+                    android:layout_marginRight="@dimen/main_interval"
+                    android:max="@integer/setting_focus_sb_max_of_long_rest" />
+
+                <TextView
+                    android:id="@+id/setting_focus_tv_long_rest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/setting_focus_status_margin_bottom"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/setting_focus_size_of_status" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_focus_item_height"
+                android:layout_marginTop="@dimen/setting_focus_item_interval"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:layout_marginTop="@dimen/setting_focus_title_margin_top"
+                    android:text="@string/setting_focus_long_rest_interval"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/setting_focus_size_of_title" />
+
+                <SeekBar
+                    android:id="@+id/setting_focus_sb_long_interval"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/setting_focus_status_margin_bottom"
+                    android:layout_marginLeft="@dimen/setting_focus_bar_margin_left"
+                    android:layout_marginRight="@dimen/main_interval"
+                    android:max="@integer/setting_focus_sb_max_of_long_interval" />
+
+                <TextView
+                    android:id="@+id/setting_focus_tv_long_interval"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="@dimen/setting_focus_status_margin_bottom"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/setting_focus_size_of_status" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_focus_item_height"
+                android:layout_marginVertical="@dimen/main_interval"
+                android:background="@android:color/white">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_interval"
+                        android:layout_marginTop="@dimen/setting_focus_title_margin_top"
+                        android:text="@string/setting_focus_light"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/setting_focus_size_of_title" />
+
+                    <Switch
+                        android:id="@+id/setting_focus_switch_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/setting_focus_switch_margin_bottom"
+                        android:layout_marginLeft="@dimen/setting_focus_bar_margin_left" />
+
+                    <TextView
+                        android:id="@+id/setting_focus_tv_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/setting_focus_status_margin_bottom"
+                        android:layout_marginLeft="@dimen/main_interval"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/setting_focus_size_of_status" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_interval"
+                        android:layout_marginTop="@dimen/setting_focus_title_margin_top"
+                        android:text="@string/setting_focus_music"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/setting_focus_size_of_title" />
+
+                    <Switch
+                        android:id="@+id/setting_focus_switch_music"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/setting_focus_switch_margin_bottom"
+                        android:layout_marginLeft="@dimen/setting_focus_bar_margin_left" />
+
+                    <TextView
+                        android:id="@+id/setting_focus_tv_music"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/setting_focus_status_margin_bottom"
+                        android:layout_marginLeft="@dimen/main_interval"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/setting_focus_size_of_status" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

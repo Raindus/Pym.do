@@ -6,6 +6,7 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.raindus.pymdo.R;
@@ -15,6 +16,16 @@ import com.raindus.pymdo.R;
  */
 
 public class BaseActivity extends AppCompatActivity implements View.OnClickListener, View.OnLongClickListener {
+
+    // 初始化标题栏
+    protected void initTitleBar(String title, boolean positive) {
+        findViewById(R.id.title_bar_negative).setOnClickListener(this);
+        ((TextView) findViewById(R.id.title_bar_title)).setText(title);
+        if (positive) {
+            findViewById(R.id.title_bar_positive).setVisibility(View.VISIBLE);
+            findViewById(R.id.title_bar_positive).setOnClickListener(this);
+        }
+    }
 
     // 在当前界面之上覆盖目标界面
     public void overlay(Class<?> classObj) {
@@ -52,9 +63,18 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         Toast.makeText(this, t, Toast.LENGTH_SHORT).show();
     }
 
+    protected void onPositive() {
+
+    }
+
     @Override
     public void onClick(View v) {
-
+        if (v.getId() == R.id.title_bar_negative)
+            finish();
+        if (v.getId() == R.id.title_bar_positive) {
+            onPositive();
+            finish();
+        }
     }
 
     @Override

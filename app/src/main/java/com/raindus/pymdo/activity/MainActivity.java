@@ -1,6 +1,7 @@
 package com.raindus.pymdo.activity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 
@@ -20,6 +21,9 @@ public class MainActivity extends BaseActivity {
     // 今日吸潘
     private ProgressCircleView mPcvTodayProgress;
 
+    // 设置
+    private RelativeLayout mRlSettingFocus;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,12 +39,28 @@ public class MainActivity extends BaseActivity {
         mRlToday = findViewById(R.id.main_rl_today);
 
         mPcvTodayProgress = findViewById(R.id.main_pcv_today_progress);
+
+        mRlSettingFocus = findViewById(R.id.main_rl_setting_focus);
+        mRlSettingFocus.setOnClickListener(this);
     }
 
     private void init() {
         mCoverDelegate = new CoverDelegate(mCrlCover, mSvScroll, mRlToday);
-
-        mPcvTodayProgress.setFraction(60, 30);
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        //mPcvTodayProgress.setFraction(60, 30);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.main_rl_setting_focus:
+                overlay(FocusSettingActivity.class);
+                break;
+        }
+    }
 }
