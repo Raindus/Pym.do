@@ -1,6 +1,9 @@
 package com.raindus.pymdo.activity;
 
+import android.app.ActivityOptions;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
@@ -24,6 +27,9 @@ public class MainActivity extends BaseActivity {
     // 设置
     private RelativeLayout mRlSettingFocus;
 
+    // 进入吸潘
+    private FloatingActionButton mFabFocus;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +48,9 @@ public class MainActivity extends BaseActivity {
 
         mRlSettingFocus = findViewById(R.id.main_rl_setting_focus);
         mRlSettingFocus.setOnClickListener(this);
+
+        mFabFocus = findViewById(R.id.main_fab_focus);
+        mFabFocus.setOnClickListener(this);
     }
 
     private void init() {
@@ -61,6 +70,15 @@ public class MainActivity extends BaseActivity {
             case R.id.main_rl_setting_focus:
                 overlay(FocusSettingActivity.class);
                 break;
+            case R.id.main_fab_focus:
+                overlayFocusAnim();
+                break;
         }
+    }
+
+    private void overlayFocusAnim() {
+        ActivityOptions options =
+                ActivityOptions.makeSceneTransitionAnimation(this, mFabFocus, mFabFocus.getTransitionName());
+        startActivity(new Intent(this, FocusActivity.class), options.toBundle());
     }
 }

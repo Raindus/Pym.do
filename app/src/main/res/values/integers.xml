@@ -17,4 +17,7 @@
     <!-- 设置 竹子钟 长休息间隔 seekBar 最大值 （1-10）-->
     <integer name="setting_focus_sb_max_of_long_interval">9</integer>
 
+    <!-- 进出竹子钟动画时长 -->
+    <integer name="focus_reveal_anim_duration">300</integer>
+
 </resources>
