@@ -3,18 +3,16 @@ package com.raindus.pymdo.activity;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.RestrictTo;
 import android.support.design.widget.FloatingActionButton;
-import android.util.Log;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.raindus.pymdo.R;
+import com.raindus.pymdo.common.DateUtils;
 import com.raindus.pymdo.dao.ObjectBox;
 import com.raindus.pymdo.focus.FocusParam;
-import com.raindus.pymdo.focus.entity.FocusEntity;
 import com.raindus.pymdo.focus.entity.FocusReportEntity;
 import com.raindus.pymdo.ui.ProgressCircleView;
 import com.raindus.pymdo.ui.cover.CoverDelegate;
@@ -85,16 +83,7 @@ public class MainActivity extends BaseActivity {
         mPcvTodayProgress.setFraction(FocusParam.getTarget(), entity.focusTime);
         mTvTodayFocus.setText(String.valueOf(entity.focusTimes));
         mTvTodayBamboo.setText(String.valueOf(entity.bambooNum));
-        StringBuilder builder = new StringBuilder();
-        int hour = entity.focusTime / 60;
-        int min = entity.focusTime % 60;
-        if (hour != 0) {
-            builder.append(hour).append("h");
-        }
-        builder.append(min);
-        if (min != 0)
-            builder.append("min");
-        mTvTodayFocusTime.setText(builder.toString());
+        mTvTodayFocusTime.setText(DateUtils.parseTime(entity.focusTime));
     }
 
     @Override

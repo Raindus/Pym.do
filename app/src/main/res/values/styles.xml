@@ -7,6 +7,7 @@
         <item name="colorPrimary">@color/dandongshi</item>
         <item name="colorPrimaryDark">@color/dandongshi_dark</item>
         <item name="colorAccent">@color/dandongshi</item>
+        <item name="android:windowContentTransitions">true</item>
     </style>
 
     <style name="TranslucentStatusTheme" parent="AppTheme">

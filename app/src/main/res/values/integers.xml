@@ -20,4 +20,9 @@
     <!-- 进出竹子钟动画时长 -->
     <integer name="focus_reveal_anim_duration">300</integer>
 
+    <!-- activity 进入动画时长-->
+    <integer name="enter_transition_duration">500</integer>
+    <!-- activity 退出动画时长-->
+    <integer name="exit_transition_duration">300</integer>
+
 </resources>

@@ -54,4 +54,17 @@ public class DateUtils {
         return -1;
     }
 
+    // X h X min
+    public static String parseTime(int time) {
+        StringBuilder builder = new StringBuilder();
+        int hour = time / 60;
+        int min = time % 60;
+        if (hour != 0) {
+            builder.append(hour).append("h");
+        }
+        builder.append(min);
+        if (min != 0)
+            builder.append("min");
+        return builder.toString();
+    }
 }

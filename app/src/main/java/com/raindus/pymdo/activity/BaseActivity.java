@@ -1,9 +1,11 @@
 package com.raindus.pymdo.activity;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.transition.Explode;
+import android.transition.Fade;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
@@ -34,16 +36,23 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.view_loading).setVisibility(View.GONE);
     }
 
-    // 在当前界面之上覆盖目标界面
-    public void overlay(Class<?> classObj) {
-        Intent intent = new Intent(this, classObj);
-        startActivity(intent);
+    // 进出场动画
+    protected void setTransitionAnimation() {
+        getWindow().setEnterTransition(new Fade().setDuration(getResources().getInteger(R.integer.enter_transition_duration)));
+        getWindow().setReturnTransition(new Explode().setDuration(getResources().getInteger(R.integer.exit_transition_duration)));
     }
 
     // 在当前界面之上覆盖目标界面
+    public void overlay(Class<?> classObj) {
+        Intent intent = new Intent(this, classObj);
+        startActivity(intent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
+    }
+
+    @SuppressWarnings("all")
+    // 在当前界面之上覆盖目标界面
     public void overlay(Class<?> classObj, int requestCode) {
         Intent intent = new Intent(this, classObj);
-        startActivityForResult(intent, requestCode);
+        startActivityForResult(intent, requestCode, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
     }
 
     // 带数据
@@ -84,11 +93,11 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.title_bar_negative:
-                finish();
+                onBackPressed();
                 break;
             case R.id.title_bar_positive:
                 onPositive();
-                finish();
+                onBackPressed();
                 break;
         }
     }

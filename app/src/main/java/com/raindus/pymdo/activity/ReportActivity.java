@@ -95,7 +95,7 @@ public class ReportActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_report);
-
+        setTransitionAnimation();
         initTitleBar(getResources().getString(R.string.main_report), false);
         initView();
         initData();

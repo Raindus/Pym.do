@@ -40,7 +40,7 @@ public class FocusSettingActivity extends BaseActivity implements SeekBar.OnSeek
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_focus_setting);
-
+        setTransitionAnimation();
         initTitleBar(getResources().getString(R.string.main_bamboo_clock), true);
         initView();
         init();
