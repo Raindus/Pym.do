@@ -3,7 +3,6 @@ package com.raindus.pymdo.ui.cover;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
@@ -14,6 +13,7 @@ import android.widget.RelativeLayout;
 
 import com.raindus.pymdo.R;
 import com.raindus.pymdo.common.MathUtils;
+import com.raindus.pymdo.common.Utils;
 
 /**
  * Created by Raindus on 2018/4/28.
@@ -83,6 +83,17 @@ public class CoverRelativeLayout extends RelativeLayout implements GestureDetect
 
     // ————————————
     // 设置封面
+    void setCover(Bitmap bitmap) {
+        if (bitmap != null) {
+            mCoverResId = bitmap.getGenerationId();
+            if (mCover != null)
+                mCover.recycle();
+            mCover = bitmap;
+            mCoverWidth = mCover.getWidth();
+            mCoverHeight = mCover.getHeight();
+            setCoverRect();
+        }
+    }
 
     // 设置封面图片,并限制大小
     void setCover(int resId) {
@@ -90,20 +101,12 @@ public class CoverRelativeLayout extends RelativeLayout implements GestureDetect
             return;
 
         // 限制图片大小
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inJustDecodeBounds = true;
-        BitmapFactory.decodeResource(getResources(), resId, options);
-        if (options.outWidth != -1 && options.outHeight != -1) {
-            int size = options.outHeight * options.outWidth;
-            if (size > CoverDelegate.BITMAP_MAX_SIZE) {
-                options.inSampleSize = size / CoverDelegate.BITMAP_MAX_SIZE + 1;
-            }
-            options.inJustDecodeBounds = false;
-
+        Bitmap temp = Utils.scaleBitmap(String.valueOf(resId), true, CoverDelegate.BITMAP_MAX_SIZE);
+        if (temp != null) {
             mCoverResId = resId;
             if (mCover != null)
                 mCover.recycle();
-            mCover = BitmapFactory.decodeResource(getResources(), resId, options);
+            mCover = temp;
             mCoverWidth = mCover.getWidth();
             mCoverHeight = mCover.getHeight();
             setCoverRect();

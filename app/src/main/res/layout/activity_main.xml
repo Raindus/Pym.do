@@ -9,8 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/white"
-        android:clickable="true"
-        app:cover="@drawable/bg_main">
+        android:clickable="true">
 
         <TextView
             android:id="@+id/main_tv_title"
@@ -134,8 +133,7 @@
                             android:id="@+id/main_iv_banner"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/bg_main_banner" />
+                            android:scaleType="fitXY" />
 
                         <TextView
                             android:id="@+id/main_tv_banner"
@@ -170,8 +168,7 @@
                             android:id="@+id/main_iv_report"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:scaleType="fitXY"
-                            android:src="@drawable/bg_main_report" />
+                            android:scaleType="fitXY" />
 
                         <TextView
                             android:id="@+id/main_tv_report"
@@ -274,6 +271,40 @@
                         android:textSize="@dimen/main_size_of_card_item_describe_text" />
                 </RelativeLayout>
 
+                <RelativeLayout
+                    android:id="@+id/main_rl_setting_theme"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/main_card_item_height"
+                    android:layout_marginTop="@dimen/main_card_item_margin_top_three"
+                    android:background="?android:selectableItemBackground"
+                    android:clickable="true">
+
+                    <ImageView
+                        android:layout_width="@dimen/main_size_of_card_item_image"
+                        android:layout_height="@dimen/main_size_of_card_item_image"
+                        android:layout_marginLeft="@dimen/main_card_item_image_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_image_margin_top"
+                        android:src="@drawable/ic_theme" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_title_margin_top"
+                        android:text="@string/main_theme"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/main_size_of_card_item_title_text" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
+                        android:layout_marginTop="@dimen/main_card_item_describe_margin_top"
+                        android:maxLines="@integer/main_max_line_of_card_item_describe_text"
+                        android:text="@string/main_theme_describe"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/main_size_of_card_item_describe_text" />
+                </RelativeLayout>
             </android.support.v7.widget.CardView>
 
             <android.support.v7.widget.CardView
@@ -333,14 +364,14 @@
                         android:layout_height="@dimen/main_size_of_card_item_image"
                         android:layout_marginLeft="@dimen/main_card_item_image_margin_left"
                         android:layout_marginTop="@dimen/main_card_item_image_margin_top"
-                        android:src="@drawable/ic_organization" />
+                        android:src="@drawable/ic_produce" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
                         android:layout_marginTop="@dimen/main_card_item_title_margin_top"
-                        android:text="@string/main_organization"
+                        android:text="@string/main_produce"
                         android:textColor="@android:color/black"
                         android:textSize="@dimen/main_size_of_card_item_title_text" />
 
@@ -350,7 +381,7 @@
                         android:layout_marginLeft="@dimen/main_card_item_text_margin_left"
                         android:layout_marginTop="@dimen/main_card_item_describe_margin_top"
                         android:maxLines="@integer/main_max_line_of_card_item_describe_text"
-                        android:text="@string/main_organization_describe"
+                        android:text="@string/main_produce_describe"
                         android:textColor="@color/text_color"
                         android:textSize="@dimen/main_size_of_card_item_describe_text" />
                 </RelativeLayout>

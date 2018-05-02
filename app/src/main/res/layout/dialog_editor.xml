@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="330dp"
+    android:layout_height="wrap_content">
+
+    <include layout="@layout/view_dialog_title_bar" />
+
+    <EditText
+        android:id="@+id/editor_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/editor_edit_margin_bottom"
+        android:layout_marginHorizontal="@dimen/title_bar_height"
+        android:layout_marginTop="@dimen/editor_edit_margin_top"
+        android:gravity="center_horizontal"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/setting_focus_size_of_title" />
+
+</RelativeLayout>

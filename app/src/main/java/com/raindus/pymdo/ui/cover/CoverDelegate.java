@@ -1,6 +1,7 @@
 package com.raindus.pymdo.ui.cover;
 
 import android.animation.ValueAnimator;
+import android.graphics.Bitmap;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -9,6 +10,8 @@ import android.view.animation.LinearInterpolator;
 
 import com.raindus.pymdo.R;
 import com.raindus.pymdo.common.MathUtils;
+import com.raindus.pymdo.common.Utils;
+import com.raindus.pymdo.personal.CoverParam;
 
 /**
  * Created by Raindus on 2018/4/28.
@@ -21,11 +24,6 @@ public class CoverDelegate {
 
     // 不计算图片密度。封面图片宽高乘积不超过5M
     static final int BITMAP_MAX_SIZE = 5 * 1024 * 1024;
-
-    // 封面图片最小宽高比例
-    final float mSlideMinScale = 2f / 3f;
-    // 封面图片最大宽高比例
-    final float mSlideMaxScale = 3f / 4f;
 
     private CoverRelativeLayout mLayout;
 
@@ -49,6 +47,16 @@ public class CoverDelegate {
 
         initVerticalAnimator();
         initHorizontalAnimator();
+    }
+
+    public void setCover(String path, boolean isResId) {
+        Bitmap bitmap = Utils.scaleBitmap(path, isResId, BITMAP_MAX_SIZE);
+        if (bitmap != null)
+            mLayout.setCover(bitmap);
+        else {
+            CoverParam.setCover(CoverParam.DEFAULT_COVER);
+            mLayout.setCover(Integer.parseInt(CoverParam.getCover()));
+        }
     }
 
     // ————————————

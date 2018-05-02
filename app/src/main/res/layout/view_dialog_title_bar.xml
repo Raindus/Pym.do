@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/title_bar_height"
+    android:background="@drawable/background_dialog_title_bar">
+
+    <ImageButton
+        android:id="@+id/title_bar_negative"
+        android:layout_width="@dimen/title_bar_height"
+        android:layout_height="@dimen/title_bar_height"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        android:src="@drawable/ic_action_negative2" />
+
+    <TextView
+        android:id="@+id/title_bar_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:textColor="@color/dandongshi"
+        android:textSize="@dimen/title_bar_size_of_title"
+        android:textStyle="bold" />
+
+
+    <ImageButton
+        android:id="@+id/title_bar_positive"
+        android:layout_width="@dimen/title_bar_height"
+        android:layout_height="@dimen/title_bar_height"
+        android:layout_alignParentRight="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        android:src="@drawable/ic_action_positive2"
+        android:visibility="invisible" />
+</RelativeLayout>

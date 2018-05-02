@@ -46,6 +46,8 @@
     <dimen name="main_card_item_margin_top_one">32dp</dimen>
     <!-- 主页 卡片item 第二项上边距-->
     <dimen name="main_card_item_margin_top_two">100dp</dimen>
+    <!-- 主页 卡片item 第二项上边距-->
+    <dimen name="main_card_item_margin_top_three">168dp</dimen>
     <!-- 主页 卡片item 图片大小-->
     <dimen name="main_size_of_card_item_image">20dp</dimen>
     <!-- 主页 卡片item 图片 左边距-->
@@ -118,4 +120,13 @@
 
     <!-- 加载文字大小-->
     <dimen name="loading_size_of_text">14dp</dimen>
+
+    <!-- 个性化设置 图片大小 -->
+    <dimen name="setting_personal_size_of_image">70dp</dimen>
+
+    <!-- popupWindow item 高度-->
+    <dimen name="popup_item_height">45dp</dimen>
+
+    <dimen name="editor_edit_margin_top">80dp</dimen>
+    <dimen name="editor_edit_margin_bottom">30dp</dimen>
 </resources>

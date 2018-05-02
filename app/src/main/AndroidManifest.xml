@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.raindus.pymdo">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:name=".PymdoApplication"
         android:allowBackup="false"
@@ -20,23 +24,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.FocusSettingActivity">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".activity.FocusActivity"
-            android:theme="@style/TranslucentStatusTheme">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity android:name=".activity.ReportActivity">
-            <intent-filter>
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/TranslucentStatusTheme"></activity>
+        <activity android:name=".activity.FocusSettingActivity"></activity>
+        <activity android:name=".activity.ReportActivity"></activity>
+        <activity android:name=".activity.PersonalSettingActivity" />
+        <activity android:name=".activity.ThemeSettingActivity"></activity>
     </application>
 
 </manifest>

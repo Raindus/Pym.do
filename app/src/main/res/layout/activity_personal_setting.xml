@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/view_title_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/personal_rl_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_focus_item_height"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:foreground="?android:selectableItemBackgroundBorderless">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:layout_marginTop="@dimen/setting_focus_title_margin_top"
+                    android:text="@string/main_nickname"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/setting_focus_size_of_title" />
+
+                <TextView
+                    android:id="@+id/personal_tv_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/main_interval"
+                    android:textColor="@color/dandongshi"
+                    android:textSize="@dimen/setting_focus_size_of_status" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_rl_cover"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_focus_item_height"
+                android:layout_marginTop="@dimen/main_interval"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:foreground="?android:selectableItemBackgroundBorderless">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:layout_marginTop="@dimen/setting_focus_title_margin_top"
+                    android:text="@string/main_cover"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/setting_focus_size_of_title" />
+
+                <ImageView
+                    android:id="@+id/personal_iv_cover"
+                    android:layout_width="@dimen/setting_personal_size_of_image"
+                    android:layout_height="@dimen/setting_personal_size_of_image"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/main_interval"
+                    android:foreground="@drawable/background_image"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_rl_banner"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_focus_item_height"
+                android:layout_marginTop="@dimen/main_interval"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:foreground="?android:selectableItemBackgroundBorderless">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:layout_marginTop="@dimen/setting_focus_title_margin_top"
+                    android:text="@string/main_banner"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/setting_focus_size_of_title" />
+
+                <ImageView
+                    android:id="@+id/personal_iv_banner"
+                    android:layout_width="@dimen/setting_personal_size_of_image"
+                    android:layout_height="@dimen/setting_personal_size_of_image"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/main_interval"
+                    android:foreground="@drawable/background_image"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/personal_rl_report"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/setting_focus_item_height"
+                android:layout_marginVertical="@dimen/main_interval"
+                android:background="@android:color/white"
+                android:clickable="true"
+                android:foreground="?android:selectableItemBackgroundBorderless">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/main_interval"
+                    android:layout_marginTop="@dimen/setting_focus_title_margin_top"
+                    android:text="@string/main_report"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/setting_focus_size_of_title" />
+
+                <ImageView
+                    android:id="@+id/personal_iv_report"
+                    android:layout_width="@dimen/setting_personal_size_of_image"
+                    android:layout_height="@dimen/setting_personal_size_of_image"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/main_interval"
+                    android:foreground="@drawable/background_image"
+                    android:scaleType="centerCrop" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

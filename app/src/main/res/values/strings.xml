@@ -6,6 +6,8 @@
     <string name="main_today_bamboo">收获竹子</string>
     <string name="main_today_focus_time">吸潘时长</string>
 
+    <string name="main_nickname">昵称</string>
+    <string name="main_cover">封面</string>
     <string name="main_banner">守得云开</string>
     <string name="main_report">吸潘报告</string>
 
@@ -13,17 +15,19 @@
     <string name="main_bamboo_clock">竹子钟</string>
     <string name="main_bamboo_clock_describe">今日目标、吸潘时长、休息时长</string>
     <string name="main_personal">个性化</string>
-    <string name="main_personal_describe">封面、音乐、标语</string>
+    <string name="main_personal_describe">昵称、封面、banner</string>
+    <string name="main_theme">主题</string>
+    <string name="main_theme_describe">背景、音乐、蒙层</string>
 
     <string name="main_creator">创造者</string>
     <string name="main_station">产品 &amp; 设计 &amp; 开发</string>
     <string name="main_station_describe">\@Raindus_</string>
-    <string name="main_organization">组织</string>
-    <string name="main_organization_describe">PYM技术研发BU（QQ群:307608737）</string>
+    <string name="main_produce">出品</string>
+    <string name="main_produce_describe">\@守得云开PYM_潘粤明个站</string>
 
     <string name="main_thanks">鸣谢</string>
     <string name="main_res">资源来源网络</string>
-    <string name="main_res_describe">\@潘粤明、@茉安之、@广大潘友</string>
+    <string name="main_res_describe">\@潘粤明、王俊雄、@茉安之、@广大潘友</string>
 
     <string name="main_about">关于</string>
     <string name="main_version">版本</string>
@@ -65,4 +69,7 @@
 
     <string name="loading_text">努力加载中...</string>
 
+    <string name="permission_personal">拒绝后无法体验个性化</string>
+    <string name="permission_theme">拒绝后无法设置主题</string>
+    <string name="permission_default">拒绝后无法选择图片</string>
 </resources>
