@@ -16,4 +16,10 @@
     <color name="background_color">#f0f0f0</color>
     <!-- 半透明背景色调 -->
     <color name="mid_transparent">#80f0f0f0</color>
+
+
+    <!-- 白噪音蒙层 -->
+    <color name="focus_pymdo">#00ffffff</color>
+    <color name="focus_love">#302775b6</color>
+    <color name="focus_positive">#30144a74</color>
 </resources>
